@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "Open Sans", sans-serif;
+  --font-family: "Manrope", sans-serif;
+  --color-primary:                  #2E7D32;
+  --color-on-primary:               #FFFFFF;
+  --color-primary-container:        #A5F5A0;
+  --color-on-primary-container:     #002204;
+  --color-primary-fixed:            #A5F5A0;
+  --color-primary-fixed-dim:        #8AD887;
+  --color-on-primary-fixed:         #002204;
+  --color-on-primary-fixed-variant: #005313;
+  --color-inverse-primary:          #8AD887;
+
+ 
+  --color-secondary:                #506352;
+  --color-on-secondary:             #FFFFFF;
+  --color-secondary-container:      #D3E8D2;
+  --color-on-secondary-container:   #0E1F12;
+
+
+  --color-tertiary:                 #39656B;
+  --color-on-tertiary:              #FFFFFF;
+  --color-tertiary-container:       #BCEBF1;
+  --color-on-tertiary-container:    #001F23;
+
+
+  --color-error:                    #BA1A1A;
+  --color-on-error:                 #FFFFFF;
+  --color-error-container:          #FFDAD6;
+  --color-on-error-container:       #410002;
+
+
+  --color-surface:                  #FCFDF6;
+  --color-surface-dim:              #DCDDD7;
+  --color-surface-bright:           #FCFDF6;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-low:    #F6F7F0;
+  --color-surface-container:        #F0F1EB;
+  --color-surface-container-high:   #EAECE5;
+  --color-surface-container-highest:#E5E6E0;
+  --color-on-surface:               #1A1C19;
+  --color-on-surface-variant:       #424940;
+  --color-surface-variant:          #DEE5D9;
+  --color-surface-tint:             #2E7D32;
+
+  --color-background:               #FCFDF6;
+  --color-on-background:            #1A1C19;
+
+  --color-outline:                  #72796F;
+  --color-outline-variant:          #C2C9BD;
+
+  --color-success:                  #2E7D32;
+  --color-success-light:            #E8F5E9;
+  --color-warning:                  #ED6C02;
+  --color-warning-light:            #FFF3E0;
+  --color-danger:                   #D32F2F;
+  --color-danger-light:             #FFEBEE;
+  --color-info:                     #0288D1;
+  --color-info-light:               #E1F5FE;
+}
