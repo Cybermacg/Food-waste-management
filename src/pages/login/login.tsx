@@ -1,14 +1,14 @@
 import { useForm, type SubmitHandler } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { z } from "zod"
-import Icon from "../components/common/Icon";
-import { authServices } from "../api/auth";
+import Icon from "../../components/common/Icon";
+import { authServices } from "../../api/auth";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { NavLink } from "react-router";
-import Loader from "../components/common/loader";
-import Header from "../components/common/header";
+import Loader from "../../components/common/loader";
+import Header from "../../components/common/header";
 
 const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
 
@@ -35,27 +35,27 @@ function Login() {
         }
     })
 
-    const onSubmit: SubmitHandler<loginFormData> = async(data) =>{
+    const onSubmit: SubmitHandler<loginFormData> = async (data) => {
         setIsloading(true)
-        try{
+        try {
             const response = await authServices.postLoginAccount({
                 username: data.username,
                 password: data.password,
             })
         } catch (error) {
-            if(axios.isAxiosError(error)){
-                if(!error.response){
+            if (axios.isAxiosError(error)) {
+                if (!error.response) {
                     toast.error('Network Error, Please check you internet connection')
-                } else if(error.response.status === 401){
+                } else if (error.response.status === 401) {
                     toast.error('Invalid username or password.')
-                } else if(error.response.status === 404){
+                } else if (error.response.status === 404) {
                     toast.error('Account not found.')
-                } else if(error.response.status === 500){
+                } else if (error.response.status === 500) {
                     toast.error("Error connecting, don't worry it's not your fault")
-                } else{
+                } else {
                     const errors = error.response.data as Record<string, string[]>
-                    Object.entries(errors).forEach(([field, message]) =>{
-                         toast.error(`${field}, ${message}`)
+                    Object.entries(errors).forEach(([field, message]) => {
+                        toast.error(`${field}, ${message}`)
                     })
                 }
             }
@@ -65,11 +65,11 @@ function Login() {
     }
     return (
         <section className="flex flex-col w-full h-screen ">
-            <Header/>
+            <Header />
             <main className="h-screen font-primary bg-[#F1F5F9] justify-center shadow-sm w-full flex flex-col items-center">
                 <div className=" p-5 space-y-4 ring ring-[#E2E8F0] rounded-sm bg-white">
                     <div className="items-center justify-center flex">
-                        <Icon/>
+                        <Icon />
                     </div>
                     <div className="text-center space-y-2">
                         <h1 className="font-bold">Food Waste Manager</h1>

@@ -1,16 +1,16 @@
 import z from "zod"
 import { useForm, type SubmitHandler } from 'react-hook-form'
 import { zodResolver } from "@hookform/resolvers/zod"
-import Icon from "../components/common/Icon";
-import { authServices } from "../api/auth";
+import Icon from "../../components/common/Icon";
+import { authServices } from "../../api/auth";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useState, useEffect } from "react";
-import { useAuthStore, useRegStore } from "../store/authStore";
+import { useAuthStore, useRegStore } from "../../store/authStore";
 import { useNavigate, NavLink } from "react-router";
 import { FaArrowRight } from "react-icons/fa";
-import AtomDemo from "../components/common/loader";
-import Header from "../components/common/header";
+import AtomDemo from "../../components/common/loader";
+import Header from "../../components/common/header";
 
 // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/;
 const registerSchema = z.object({
@@ -74,7 +74,7 @@ function Register() {
                 is_active: data.is_active,
             })
             setUser(response)
-             navigate('/login')
+            navigate('/login')
         } catch (error) {
             if (axios.isAxiosError(error)) {
                 if (!error.response) {

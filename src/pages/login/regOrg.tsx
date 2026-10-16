@@ -3,12 +3,12 @@ import { useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { authServices } from "../api/auth";
+import { authServices } from "../../api/auth";
 import { useState } from "react";
-import { useRegStore } from "../store/authStore";
-import Icon from "../components/common/Icon";
-import Header from "../components/common/header";
-import AtomDemo from "../components/common/loader";
+import { useRegStore } from "../../store/authStore";
+import Icon from "../../components/common/Icon";
+import Header from "../../components/common/header";
+import AtomDemo from "../../components/common/loader";
 import { NavLink, useNavigate } from "react-router";
 import { FaArrowRight } from "react-icons/fa";
 
