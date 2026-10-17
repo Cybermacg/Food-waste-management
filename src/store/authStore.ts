@@ -16,6 +16,8 @@ interface RegState {
     clearRegacc: () => void;
 }
 
+
+// store for storing branch reg response data
 export const useAuthStore = create<AuthState>()(
     persist(
         (set) => ({
@@ -30,7 +32,7 @@ export const useAuthStore = create<AuthState>()(
     )
 )
   
-
+// store storing org reg response data
 export const useRegStore = create<RegState>() (
 
     persist(
