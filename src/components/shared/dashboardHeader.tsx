@@ -38,10 +38,10 @@ function DashBoardHeader () {
                 </div>
 
                 {/* Divider */}
-                <div className="w-px h-5 bg-gray-300"></div>
+                <div className="hidden 2xl:block w-px h-5 bg-gray-300"></div>
 
                 {/* Store selector */}
-                <div className="bg-gray-50 px-3 flex items-center gap-1.5 rounded-md border border-gray-300 text-[12px] py-1.5 whitespace-nowrap">
+                <div className="hidden 2xl:flex bg-gray-50 px-3 items-center gap-1.5 rounded-md border border-gray-300 text-[12px] py-1.5 whitespace-nowrap">
                     <MdOutlineStoreMallDirectory size={14} className="text-emerald-700" />
                     <p className="font-semibold text-gray-700">
                         {useBranchName?.name ?? "Store"} - {useBranchName?.city_display ?? "Location"}
@@ -50,7 +50,7 @@ function DashBoardHeader () {
                 </div>
 
                 {/* Telemetry badge */}
-                <div className="bg-emerald-50 border border-emerald-200 flex gap-1.5 items-center text-emerald-800 text-[12px] font-medium px-3 py-1.5 rounded-full whitespace-nowrap">
+                <div className="hidden 2xl:flex bg-emerald-50 border border-emerald-200 gap-1.5 items-center text-emerald-800 text-[12px] font-medium px-3 py-1.5 rounded-full whitespace-nowrap">
                     <GoDotFill className="text-emerald-500 text-[10px]"/>
                     <p>Telemetry Active</p>
                 </div>

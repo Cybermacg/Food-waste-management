@@ -6,7 +6,7 @@ function Layout (){
     return(
         <section className="flex flex-row">
             <SideBar/>
-            <main className="w-full">
+            <main className="min-w-0 flex-1">
                 <DashBoardHeader/>
                 <div className="w-full p-5">
                      <Outlet/>
